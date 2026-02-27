@@ -48,10 +48,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chunk
   fencePrefab: {fileID: 4761275227659289089, guid: b30f44196becc6d42bf2bb3cff9022e7, type: 3}
-  lanes:
-  - 1
-  - 4
-  - 8
+  applePrefab: {fileID: 8756099426995676720, guid: 9866b65265b095d4084cab5999550b5d, type: 3}
+  coinPrefab: {fileID: 4881394010062313062, guid: c833fade5f1a22546ab915d1a9281bf1, type: 3}
+  lanes: feffffff0100000004000000
+  appleChance: 0.1
+  coinChance: 0.2
+  coinConsecutiveChance: 0.8
+  coinLane: -1
+  pastChunk: {fileID: 0}
 --- !u!1 &1850143411288749278
 GameObject:
   m_ObjectHideFlags: 0

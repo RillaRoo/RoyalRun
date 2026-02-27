@@ -16,7 +16,8 @@ public class LevelGenerator : MonoBehaviour
 
 	private float chunkLenght = 10f;
 	private float spawnPositionZ = 0f;
-	
+
+	private Chunk chunkScript;
 
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start()
@@ -43,8 +44,13 @@ public class LevelGenerator : MonoBehaviour
 		Vector3 chunkSpawnPos = new Vector3(transform.position.x, transform.position.y, spawnPositionZ);
 		GameObject newChunk = Instantiate(floorPrefab, chunkSpawnPos, Quaternion.identity, floorTilesParent); //pôr o floorTilesParent no fim faz com que cada instancia passe a ser filha dele
 		instanceDistance = instanceDistance + new Vector3(0, 0, 10);
-
 		chunks.Add(newChunk);
+		if (chunks.Count < 2)
+		{
+			return;
+		}
+		chunkScript = newChunk.GetComponent<Chunk>();
+		chunkScript.pastChunk = chunks[chunks.Count - 2]; //vai buscar o penúltimo elemento
 	}
 
 	private float CalculateSpawnPositionZ()
