@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5993722421373454288}
   - component: {fileID: 2771752761385003307}
+  - component: {fileID: -3606959634131273872}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -80,12 +81,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.77115446, y: 0.66218024, z: 0.76843023}
   m_Center: {x: 0.0027243793, y: 0.34871718, z: -0.0013622046}
+--- !u!114 &-3606959634131273872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8756099426995676720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442be9c5b539f93409b9d45eb95f9f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup
 --- !u!1001 &9002226499647327071
 PrefabInstance:
   m_ObjectHideFlags: 0
